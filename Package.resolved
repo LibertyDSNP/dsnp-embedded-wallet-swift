@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Bip39",
+        "repositoryURL": "https://github.com/tesseract-one/Bip39.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "ac728b82520e93a17deb1c2af2c9c952274db703",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "CryptoSwift",
+        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "3a2acbb32ab68215ee1596ee6004da8e90c3721b",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "KeychainSwift",
+        "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
+        "state": {
+          "branch": "master",
+          "revision": "32a99b537d1c6f3529a08257c28a5feb70c0c5af",
+          "version": null
+        }
+      },
+      {
+        "package": "secp256k1",
+        "repositoryURL": "https://github.com/Boilertalk/secp256k1.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "823281fe9def21b384099b72a9a53ca988317b20",
+          "version": "0.1.4"
+        }
+      },
+      {
+        "package": "UncommonCrypto",
+        "repositoryURL": "https://github.com/tesseract-one/UncommonCrypto.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "e089407582e1f2d81dc11ba167362742422b8979",
+          "version": "0.1.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
