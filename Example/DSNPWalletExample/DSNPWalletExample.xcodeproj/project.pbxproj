@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C7DA611B27EA5A1200BB4BB1 /* DSNPWallet in Frameworks */ = {isa = PBXBuildFile; productRef = C7DA611A27EA5A1200BB4BB1 /* DSNPWallet */; };
+		C7DA611D27EAB5C600BB4BB1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DA611C27EAB5C600BB4BB1 /* View.swift */; };
 		C7E2D92427EA59140020E4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E2D92327EA59140020E4D3 /* AppDelegate.swift */; };
 		C7E2D92627EA59140020E4D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E2D92527EA59140020E4D3 /* SceneDelegate.swift */; };
 		C7E2D92827EA59140020E4D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E2D92727EA59140020E4D3 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7DA611C27EAB5C600BB4BB1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C7E2D92027EA59140020E4D3 /* DSNPWalletExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSNPWalletExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E2D92327EA59140020E4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7E2D92527EA59140020E4D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,12 +64,13 @@
 			isa = PBXGroup;
 			children = (
 				C7E2D92327EA59140020E4D3 /* AppDelegate.swift */,
-				C7E2D92527EA59140020E4D3 /* SceneDelegate.swift */,
-				C7E2D92727EA59140020E4D3 /* ViewController.swift */,
-				C7E2D92927EA59140020E4D3 /* Main.storyboard */,
 				C7E2D92C27EA59160020E4D3 /* Assets.xcassets */,
-				C7E2D92E27EA59160020E4D3 /* LaunchScreen.storyboard */,
 				C7E2D93127EA59160020E4D3 /* Info.plist */,
+				C7E2D92E27EA59160020E4D3 /* LaunchScreen.storyboard */,
+				C7E2D92927EA59140020E4D3 /* Main.storyboard */,
+				C7E2D92527EA59140020E4D3 /* SceneDelegate.swift */,
+				C7DA611C27EAB5C600BB4BB1 /* View.swift */,
+				C7E2D92727EA59140020E4D3 /* ViewController.swift */,
 			);
 			path = DSNPWalletExample;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7DA611D27EAB5C600BB4BB1 /* View.swift in Sources */,
 				C7E2D92827EA59140020E4D3 /* ViewController.swift in Sources */,
 				C7E2D92427EA59140020E4D3 /* AppDelegate.swift in Sources */,
 				C7E2D92627EA59140020E4D3 /* SceneDelegate.swift in Sources */,
