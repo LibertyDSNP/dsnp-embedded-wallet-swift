@@ -12,7 +12,7 @@ import UniformTypeIdentifiers
 class ViewController: UIViewController {
     
     private var stackView: View?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
             do {
                 let export = try DSNPWallet().exportKeys(password: textInput?.text ?? "")
                 if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                    let fileURL = dir.appendingPathComponent("export.txt")
+                    let fileURL = dir.appendingPathComponent("dsnp_keys.txt")
                     try export?.write(to: fileURL)
                     let documentController = UIDocumentPickerViewController(forExporting: [fileURL])
                     self.present(documentController, animated: true, completion: nil)
@@ -102,6 +102,7 @@ class ViewController: UIViewController {
             documentBrowserController.allowsMultipleSelection = false
             documentBrowserController.delegate = self
             self.present(documentBrowserController, animated: true, completion: nil)
+            // Import will occur in UIDocumentPickerDelegate:didPickDocumentsAt
         }
     }
     
@@ -120,12 +121,9 @@ class ViewController: UIViewController {
 
 extension ViewController: UIDocumentPickerDelegate {
     
-    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
-        self.uploadDataFromUrl(url: url)
-    }
-    
-    func uploadDataFromUrl(url: URL) {
-        if FileManager.default.fileExists(atPath: url.path) {
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        if let url = urls.first,
+           FileManager.default.fileExists(atPath: url.path) {
             let alert = UIAlertController(title: "Import Key", message: "Enter Password", preferredStyle: .alert)
             alert.addTextField { (textField) in
                 textField.isSecureTextEntry = true

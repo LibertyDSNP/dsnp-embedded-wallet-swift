@@ -9,12 +9,12 @@ import UIKit
 
 class View: UIView {
     
-    private var loadKeyButton: UIButton?
-    private var createKeyButton: UIButton?
-    private var importKeyButton: UIButton?
-    private var exportKeyButton: UIButton?
-    private var resetKeyButton: UIButton?
-    private var signMessageButton: UIButton?
+    private var loadKeyButton: UIButton!
+    private var createKeyButton: UIButton!
+    private var importKeyButton: UIButton!
+    private var exportKeyButton: UIButton!
+    private var resetKeyButton: UIButton!
+    private var signMessageButton: UIButton!
     
     public var didPressLoadKeys: (() -> Void)?
     public var didPressCreateKeys: (() -> Void)?
@@ -54,40 +54,30 @@ class View: UIView {
         divider.heightAnchor.constraint(equalToConstant: 30).isActive = true
         stackView.addArrangedSubview(divider)
         
-        let loadKeyButton = UIButton(title: "View Key", target: self, action: #selector(loadKeys))
+        loadKeyButton = UIButton(title: "View Key", target: self, action: #selector(loadKeys))
+        createKeyButton = UIButton(title: "Create Key", target: self, action: #selector(createNewKeys))
+        importKeyButton = UIButton(title: "Import Key", target: self, action: #selector(importKeys))
+        exportKeyButton = UIButton(title: "Export Key", target: self, action: #selector(exportKeys))
+        resetKeyButton = UIButton(title: "Reset Key", target: self, action: #selector(resetKeys))
+        signMessageButton = UIButton(title: "Sign Message", target: self, action: #selector(signMessage))
+        
         stackView.addArrangedSubview(loadKeyButton)
-        self.loadKeyButton = loadKeyButton
-        
-        let createKeyButton = UIButton(title: "Create Key", target: self, action: #selector(createNewKeys))
         stackView.addArrangedSubview(createKeyButton)
-        self.createKeyButton = createKeyButton
-
-        let importKeyButton = UIButton(title: "Import Key", target: self, action: #selector(importKeys))
         stackView.addArrangedSubview(importKeyButton)
-        self.importKeyButton = importKeyButton
-        
-        let exportKeyButton = UIButton(title: "Export Key", target: self, action: #selector(exportKeys))
         stackView.addArrangedSubview(exportKeyButton)
-        self.exportKeyButton = exportKeyButton
-        
-        let resetKeyButton = UIButton(title: "Reset Key", target: self, action: #selector(resetKeys))
         stackView.addArrangedSubview(resetKeyButton)
-        self.resetKeyButton = resetKeyButton
-        
-        let signMessageButton = UIButton(title: "Sign Message", target: self, action: #selector(signMessage))
         stackView.addArrangedSubview(signMessageButton)
-        self.signMessageButton = signMessageButton
         
         self.refreshView(keysExist: false)
     }
     
     public func refreshView(keysExist: Bool) {
-        loadKeyButton?.isHidden = !keysExist
-        createKeyButton?.isHidden = keysExist
-        importKeyButton?.isHidden = keysExist
-        exportKeyButton?.isHidden = !keysExist
-        resetKeyButton?.isHidden = !keysExist
-        signMessageButton?.isHidden = !keysExist
+        loadKeyButton.isHidden = !keysExist
+        createKeyButton.isHidden = keysExist
+        importKeyButton.isHidden = keysExist
+        exportKeyButton.isHidden = !keysExist
+        resetKeyButton.isHidden = !keysExist
+        signMessageButton.isHidden = !keysExist
     }
     
     @objc private func loadKeys() { self.didPressLoadKeys?() }
