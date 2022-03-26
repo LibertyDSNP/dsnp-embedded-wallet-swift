@@ -19,9 +19,9 @@ public struct DSNPWallet {
         
         // Create encrypted mnemonic
         let mnemonic = Mnemonic.generate()
-        let encryptedMnemonic = try? WalletEncryption().encrypt(mnemonic)
+        let encryptedMnemonic = try WalletEncryption().encrypt(mnemonic)
         let keychain = KeychainSwift()
-        keychain.set(encryptedMnemonic!, forKey: kKeysEncryptionKey)
+        keychain.set(encryptedMnemonic, forKey: kKeysEncryptionKey)
         
         // Initialize keys from decrypted mnemonic
         let keys = DSNPKeys(mnemonic: mnemonic)
