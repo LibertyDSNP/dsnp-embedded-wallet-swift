@@ -142,7 +142,6 @@ extension WalletEncryption {
         var error: Unmanaged<CFError>?
         
         // Private key access control
-//        let privateKeyAccessControl: SecAccessControlCreateFlags = SecureEnclave.isAvailable ?  [.userPresence, .privateKeyUsage] : [.userPresence]
         let privateKeyAccessControl: SecAccessControlCreateFlags = SecureEnclave.isAvailable ?  [.privateKeyUsage] : []
 
         guard let privateKeyAccess = SecAccessControlCreateWithFlags(kCFAllocatorDefault, kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly, privateKeyAccessControl, &error) else {

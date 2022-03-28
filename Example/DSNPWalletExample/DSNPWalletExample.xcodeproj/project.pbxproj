@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C775B48B27F272D9004DEC2A /* DSNPWalletExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C775B48A27F272D9004DEC2A /* DSNPWalletExampleTests.swift */; };
 		C7DA611B27EA5A1200BB4BB1 /* DSNPWallet in Frameworks */ = {isa = PBXBuildFile; productRef = C7DA611A27EA5A1200BB4BB1 /* DSNPWallet */; };
 		C7DA611D27EAB5C600BB4BB1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DA611C27EAB5C600BB4BB1 /* View.swift */; };
 		C7E2D92427EA59140020E4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E2D92327EA59140020E4D3 /* AppDelegate.swift */; };
@@ -17,7 +18,19 @@
 		C7E2D93027EA59160020E4D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E2D92E27EA59160020E4D3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C775B48C27F272D9004DEC2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E2D91827EA59140020E4D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7E2D91F27EA59140020E4D3;
+			remoteInfo = DSNPWalletExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C775B48827F272D9004DEC2A /* DSNPWalletExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSNPWalletExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C775B48A27F272D9004DEC2A /* DSNPWalletExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSNPWalletExampleTests.swift; sourceTree = "<group>"; };
 		C7DA611C27EAB5C600BB4BB1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C7E2D92027EA59140020E4D3 /* DSNPWalletExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSNPWalletExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E2D92327EA59140020E4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +44,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C775B48527F272D9004DEC2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7E2D91D27EA59140020E4D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,11 +62,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C775B48927F272D9004DEC2A /* DSNPWalletExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				C775B48A27F272D9004DEC2A /* DSNPWalletExampleTests.swift */,
+			);
+			path = DSNPWalletExampleTests;
+			sourceTree = "<group>";
+		};
 		C7E2D91727EA59140020E4D3 = {
 			isa = PBXGroup;
 			children = (
 				C7E2D93827EA59970020E4D3 /* dsnp-embedded-wallet-swift */,
 				C7E2D92227EA59140020E4D3 /* DSNPWalletExample */,
+				C775B48927F272D9004DEC2A /* DSNPWalletExampleTests */,
 				C7E2D92127EA59140020E4D3 /* Products */,
 				C7E2D93927EA59AB0020E4D3 /* Frameworks */,
 			);
@@ -56,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				C7E2D92027EA59140020E4D3 /* DSNPWalletExample.app */,
+				C775B48827F272D9004DEC2A /* DSNPWalletExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +115,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C775B48727F272D9004DEC2A /* DSNPWalletExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C775B49027F272D9004DEC2A /* Build configuration list for PBXNativeTarget "DSNPWalletExampleTests" */;
+			buildPhases = (
+				C775B48427F272D9004DEC2A /* Sources */,
+				C775B48527F272D9004DEC2A /* Frameworks */,
+				C775B48627F272D9004DEC2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C775B48D27F272D9004DEC2A /* PBXTargetDependency */,
+			);
+			name = DSNPWalletExampleTests;
+			productName = DSNPWalletExampleTests;
+			productReference = C775B48827F272D9004DEC2A /* DSNPWalletExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C7E2D91F27EA59140020E4D3 /* DSNPWalletExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7E2D93427EA59160020E4D3 /* Build configuration list for PBXNativeTarget "DSNPWalletExample" */;
@@ -115,6 +163,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					C775B48727F272D9004DEC2A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C7E2D91F27EA59140020E4D3;
+					};
 					C7E2D91F27EA59140020E4D3 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -134,11 +186,19 @@
 			projectRoot = "";
 			targets = (
 				C7E2D91F27EA59140020E4D3 /* DSNPWalletExample */,
+				C775B48727F272D9004DEC2A /* DSNPWalletExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C775B48627F272D9004DEC2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7E2D91E27EA59140020E4D3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,6 +212,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C775B48427F272D9004DEC2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C775B48B27F272D9004DEC2A /* DSNPWalletExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7E2D91C27EA59140020E4D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +232,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C775B48D27F272D9004DEC2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7E2D91F27EA59140020E4D3 /* DSNPWalletExample */;
+			targetProxy = C775B48C27F272D9004DEC2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C7E2D92927EA59140020E4D3 /* Main.storyboard */ = {
@@ -185,6 +261,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C775B48E27F272D9004DEC2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U95Q67332B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dsnp.wallet.DSNPWalletExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSNPWalletExample.app/DSNPWalletExample";
+			};
+			name = Debug;
+		};
+		C775B48F27F272D9004DEC2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U95Q67332B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dsnp.wallet.DSNPWalletExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSNPWalletExample.app/DSNPWalletExample";
+			};
+			name = Release;
+		};
 		C7E2D93227EA59160020E4D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -360,6 +472,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C775B49027F272D9004DEC2A /* Build configuration list for PBXNativeTarget "DSNPWalletExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C775B48E27F272D9004DEC2A /* Debug */,
+				C775B48F27F272D9004DEC2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C7E2D91B27EA59140020E4D3 /* Build configuration list for PBXProject "DSNPWalletExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
