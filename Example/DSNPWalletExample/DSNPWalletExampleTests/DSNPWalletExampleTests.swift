@@ -55,6 +55,18 @@ class DSNPWalletExampleTests: XCTestCase {
         XCTAssertNotNil(keys?.publicKeyRaw)
     }
     
+    func test_exportMnemonicIsSuccessful() {
+        let _ = try? DSNPWallet().createKeys()
+        
+        do {
+            let mnemonic = try DSNPWallet().exportMnemonic()
+            print(mnemonic)
+            XCTAssertNotNil(mnemonic)
+        } catch {
+            XCTFail("Error Thrown exporting mnemonic")
+        }
+    }
+    
     func test_signMessageIsSuccessfulWhenKeysAreAvailable() {
         let _ = try? DSNPWallet().createKeys()
         let data = try? DSNPWallet().sign("Hello World")

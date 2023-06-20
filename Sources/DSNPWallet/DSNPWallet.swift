@@ -66,6 +66,15 @@ public struct DSNPWallet {
         return keys
     }
     
+    public func exportMnemonic() throws -> String {
+        let keychain = KeychainSwift()
+        guard let data = keychain.getData(kKeysEncryptionKey) else {
+            throw DSNPWalletError.keysNotFound
+        }
+
+        return try WalletEncryption().decrypt(data)
+    }
+    
     public func sign(_ message: String) throws -> Data? {
         guard let keys = try self.loadKeys() else { throw DSNPWalletError.keysNotFound }
         let data = message.data(using: .utf8)
