@@ -60,7 +60,6 @@ class DSNPWalletExampleTests: XCTestCase {
         
         do {
             let mnemonic = try DSNPWallet().exportMnemonic()
-            print(mnemonic)
             XCTAssertNotNil(mnemonic)
         } catch {
             XCTFail("Error Thrown exporting mnemonic")
